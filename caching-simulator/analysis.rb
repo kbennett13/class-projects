@@ -79,6 +79,24 @@ def round(param)
 end
 
 ####################################
+# reset
+#
+# Zeroes counts and empties arrays.
+####################################
+def reset
+  $strict_faults = 0.0
+  $practical_faults = 0.0
+  $window = ""
+  $working_set = []
+  $strict_working_set_sizes = []
+  $practical_working_set_sizes = []
+  $strict_avg_set_size = 0.0
+  $practical_avg_set_size = 0.0
+  $strict_max_set_size = 0.0
+  $practical_max_set_size = 0.0
+end
+
+####################################
 # print_results
 #
 # Prints results of analysis
@@ -161,23 +179,11 @@ def main (n)
   $pf = " Prac. F(d) |"
   $sm = " Str. Max |"
   $pm = " Prac. Max"
-
-  #puts $d + $sp + $pp + $sw + $pw + $sf + $pf + $sm + $pm
   
   # Analyze behaviors of different window sizes
   (1..64).each do |i|
     # Initialize counters and containers
-    $strict_faults = 0.0
-    $practical_faults = 0.0
-    $window = ""
-    $working_set = []
-    $strict_working_set_sizes = []
-    $practical_working_set_sizes = []
-    $strict_avg_set_size = 0.0
-    $practical_avg_set_size = 0.0
-    $strict_max_set_size = 0.0
-    $practical_max_set_size = 0.0
-    
+    reset
   
     # Print window size
     ($d.length+$sp.length+$pp.length+$sw.length+$pw.length+$sf.length+$pf.length+$sm.length+$pm.length).times {print "-"}

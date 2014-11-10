@@ -1,0 +1,1 @@
+This project simulates different cache policies with different window sizes. It measures total page faults, fault rate, average working set size, and maximum working set size for strict and practical policies.
