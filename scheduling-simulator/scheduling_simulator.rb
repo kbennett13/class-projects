@@ -309,30 +309,20 @@ end
 #
 #################################################
 def main
-  #reset
-  #hrrn(9)
-  #reset
-  #hrrn(19)
-  #reset
-  #hrrn(39)
-  reset
-  rr(4,9)
-  #reset
-  #rr(4,19)
-  #reset
-  #rr(4,39)
-  reset
-  rr(2,9)
-  #reset
-  #rr(2,19)
-  #reset
-  #rr(2,39)
-  reset
-  rr(7,9)
-  #reset
-  #rr(7,19)
-  #reset
-  #rr(7,39)
+  disk = [9, 19, 39]
+  quanta = [4, 2, 7]
+  
+  quanta.each do |q|
+    reset
+    hrrn(q)
+  end
+  
+  quanta.each do |q|
+    disk.each do |d|
+      reset
+      rr(q,d)
+    end
+  end
 end
 
 main

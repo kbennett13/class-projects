@@ -1,0 +1,1 @@
+This project simulates several different process scheduling algorithms with a test set of 8 processes whose times are known prior to being scheduled. The policies implemented are highest response ratio next and round robin.
