@@ -1,0 +1,1 @@
+This project implements personalized pagerank. It uses the adjacency matrix of a graph G (~8000 nodes) and a pre-labeled set of those node (~300 nodes) to label the remaining nodes. The pre-labeled set is used in two-fold cross validation to tune the teleporting parameter in the personalized pagerank vector calculation.
